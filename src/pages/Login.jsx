@@ -26,7 +26,7 @@ const Login = () => {
     const endpoint = isRecoveryMode ? '/api/forgot-password' : '/api/login';
     
     try {
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://nextgen-builds-backend-production.up.railway.app${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(isRecoveryMode ? { email: formData.email } : formData),

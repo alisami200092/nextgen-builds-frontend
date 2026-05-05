@@ -63,7 +63,7 @@ export default function EnthusiastPath() {
     try {
       await new Promise(resolve => setTimeout(resolve, 800));
 
-      const response = await fetch('http://localhost:5000/api/build/enthusiast', {
+      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/build/enthusiast', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -388,7 +388,7 @@ function ResultCard({ build, onReset }) {
   const handleDeepAnalysis = async () => {
     setIsScanning(true);
     try {
-      const response = await fetch('http://localhost:5000/api/predict-fps', {
+      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/predict-fps', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(build.specs) 
@@ -422,7 +422,7 @@ function ResultCard({ build, onReset }) {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/api/builds/save', {
+    const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/builds/save', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -730,7 +730,7 @@ function DeepAnalysisDashboard({ build, initialAiMatrix }) {
     const fetchUpdatedMatrix = async () => {
       setIsRecalculating(true);
       try {
-        const response = await fetch('http://localhost:5000/api/predict-fps', {
+        const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/predict-fps', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           // We pass the new Neural states directly back to the Python bridge!

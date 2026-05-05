@@ -28,7 +28,7 @@ export default function BuildViewer() {
       if (!token) return navigate('/login');
 
       try {
-        const response = await fetch('http://localhost:5000/api/builds/my-hangar', {
+        const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/builds/my-hangar', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         
