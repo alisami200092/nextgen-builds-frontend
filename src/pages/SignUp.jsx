@@ -22,7 +22,7 @@ const SignUp = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/signup', {
+      const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

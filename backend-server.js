@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import pkg from "pg";
 import cors from "cors";
@@ -7,14 +8,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// PostgreSQL connection
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "pc_builder_ai",
-  password: "admin1122",  
-  port: 5432,
-});
+// PostgreSQL connection (InstaCloud / Cloud with local fallback)
+const pool = new Pool(
+  process.env.DATABASE_URL
+    ? {
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false },
+      }
+    : {
+        user: "postgres",
+        host: "localhost",
+        database: "pc_builder_ai",
+        password: "admin1122",
+        port: 5432,
+      }
+);
 
 // Example endpoint: get all components
 app.get("/api/components", async (req, res) => {

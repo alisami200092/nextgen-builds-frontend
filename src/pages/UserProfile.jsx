@@ -27,7 +27,7 @@ export default function UserProfile() {
   useEffect(() => {
     const fetchBuilds = async () => {
       try {
-        const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/builds/my-hangar', {
+        const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/builds/my-hangar', {
           method: 'GET',
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -48,7 +48,7 @@ export default function UserProfile() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://nextgen-builds-backend-production.up.railway.app/api/builds/${id}`, {
+      const response = await fetch(`https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/builds/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });

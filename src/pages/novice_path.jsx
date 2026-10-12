@@ -39,7 +39,7 @@ export default function NovicePath() {
     const buildData = { budget, purposes: selectedPurposes, resolution, needsWifi };
 
     try {
-      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/build/novice', {
+      const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/build/novice', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(buildData),
@@ -283,7 +283,7 @@ function ResultCard({ build, onReset }) {
     setIsScanning(true);
     
     try {
-      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/predict-fps', {
+      const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/predict-fps', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...build.specs, upscaling: 'Off (Native)', frameGen: 'Off' })
@@ -329,7 +329,7 @@ function ResultCard({ build, onReset }) {
         image_url: build.image_url
       };
 
-      const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/builds/save', {
+      const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/builds/save', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -589,7 +589,7 @@ function DeepAnalysisDashboard({ build, initialAiMatrix }) {
     const fetchUpdatedMatrix = async () => {
       setIsRecalculating(true);
       try {
-        const response = await fetch('https://nextgen-builds-backend-production.up.railway.app/api/predict-fps', {
+        const response = await fetch('https://prod-main-api-ddd22f-003w64y1xh9.compute.instacloud-edge.com/api/predict-fps', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ 
