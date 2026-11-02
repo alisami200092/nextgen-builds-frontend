@@ -44,14 +44,24 @@ Building a PC should be thrilling, not exhausting. Most builders spend days swit
 ## ✨ Key Features
 
 ### 🎯 1. Tailored Configuration Paths
-Not everyone thinks in clock frequencies and socket pin counts. NextGen Builds provides two distinct entry points:
+Not everyone thinks in clock frequencies and socket pin counts. NextGen Builds provides two distinct entry points depending on your hardware expertise:
 
 - **The Smart Assistant (Beginner):** Select your target budget (with an interactive slider), intended use-case (Gaming, Video Editing, Office, Streaming), preferred resolution (1080p, 1440p, 4K), and networking requirements. The AI engine handles the component synergy automatically.
-- **The Pro Configurator (Enthusiast):** Full manual control over silicon tiers (Intel Core Ultra, AMD Ryzen 7000/9000), graphics architecture (NVIDIA RTX, AMD Radeon, Intel Arc), memory capacity, and target wattage.
+- **The Pro Configurator (Enthusiast):** Full granular control over silicon tiers (Intel Core Ultra, AMD Ryzen 7000/9000), graphics architecture (NVIDIA RTX, AMD Radeon, Intel Arc), memory allocation, and target wattage.
 
 <div align="center">
-  <img src="./docs/screenshots/build-paths.png" alt="Build Paths" width="49%" style="border-radius: 8px;" />
-  <img src="./docs/screenshots/novice-wizard.png" alt="Novice Configuration Wizard" width="49%" style="border-radius: 8px;" />
+  <p><b>Choose Your Path:</b></p>
+  <img src="./docs/screenshots/build-paths.png" alt="Choose Your Build Path" width="85%" style="border-radius: 8px; margin-bottom: 16px;" />
+
+  <p><b>Configuration Wizards (Beginner vs. Enthusiast Pro):</b></p>
+  <img src="./docs/screenshots/novice-wizard.png" alt="The Smart Assistant (Novice Path)" width="49%" style="border-radius: 8px;" />
+  <img src="./docs/screenshots/enthusiast-configurator.png" alt="The Pro Configurator (Enthusiast Path)" width="49%" style="border-radius: 8px;" />
+
+  <br /><br />
+
+  <p><b>Generated Loadouts (Novice Recommendation vs. Enthusiast Tier):</b></p>
+  <img src="./docs/screenshots/recommended-loadout.png" alt="Recommended Loadout Result" width="49%" style="border-radius: 8px;" />
+  <img src="./docs/screenshots/enthusiast-summary.png" alt="Enthusiast Pro Loadout Result" width="49%" style="border-radius: 8px;" />
 </div>
 
 ---
